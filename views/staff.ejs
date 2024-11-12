@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Staff Members</title>
     <link rel="stylesheet" href="/css/app.css">    
 </head>
 <body>
     <%- include('./partials/nav') %>
+    <h1>Staff Members</h1>
+    <ol>
+        <% staffData.forEach(member => { %>
+            <li>
+                <a href="/staff/<%=member.name%>"><%=member.name%></a>
+            </li>
+            
+        <% }); %>
+    </ol>
 </body>
 </html>
