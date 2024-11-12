@@ -1,8 +1,9 @@
 const express = require("express");
 const app = express();
+app.use(express.static('public'));
 
 const welcomeMessage =
-  "Welcome to Memecorp, the best place to hire famous Meme People for taks.";
+  "Welcome to Memecorp, the best place to hire famous Meme People for tasks.";
 const historyTxt =
   "This company has a history, the best history, a long history of doing stuff for people. I promise. Do not think about it too much.";
 const staffData = [

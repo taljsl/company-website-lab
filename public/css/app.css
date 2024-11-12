@@ -1,0 +1,75 @@
+.background {
+    background-image: url("https://slidechef.net/wp-content/uploads/2022/06/Retro-90s-Background-768x432.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    /* width: 100%; */
+}
+
+.nav {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 30px;
+    color: white;
+    background-color: white;
+}
+
+#mainTitle {
+    display: flex;
+    justify-self: center;
+    font-size: 100px;
+    color: navy;
+}
+
+#about{
+    display: flex;
+    justify-self: center;
+    font-size: 35px;
+    color: navy;
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    font-size: 35px;
+    color: navy;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#staff {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    font-size: 35px;
+    color: navy;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    font-size: 35px;
+    color: navy;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+   
+}
+
+#links {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    font-size: 35px;
+    color: white;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: navy;
+}

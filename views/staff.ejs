@@ -6,10 +6,11 @@
     <title>Staff Members</title>
     <link rel="stylesheet" href="/css/app.css">    
 </head>
+<div class="background">
 <body>
     <%- include('./partials/nav') %>
-    <h1>Staff Members</h1>
-    <ol>
+    <h1 id="mainTitle">Staff Members</h1>
+    <ol id="staff">
         <% staffData.forEach(member => { %>
             <li>
                 <a href="/staff/<%=member.name%>"><%=member.name%></a>
@@ -18,4 +19,5 @@
         <% }); %>
     </ol>
 </body>
+</div>
 </html>
