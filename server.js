@@ -1,6 +1,10 @@
 const express = require("express");
 const app = express();
 
+
+
+
+
 const welcomeMessage =
   "Welcome to Memecorp, the best place to hire famous Meme People for taks.";
 const historyTxt =
@@ -12,12 +16,12 @@ const staffData = [
 ];
 
 const projects = [
-    {name: "Greg Project 1", link:'../images/Greg1.jpeg'  },
-    {name: "Greg Project 2", link: '../images/Greg2.jpeg'},
-    {name: 'Scumbag Steve Project 1', link:' ../images/steve.png'},
-    {name: "Bad Luck Brian Project 1", link:'../images/brian1.webp' },
-    {name: "Bad Luck Brian Project 2", link:'../images/brian2.webp'},
-    {name: "Bad Luck Brian Project 3", link:'../images/brian3.jpg'},
+    {name: "Greg Project 1", link:'https://imgix.ranker.com/user_node_img/50007/1000130881/original/good-guy-greg-on-scumbag-steve-photo-u2?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=500', description:'Look what he did'  },
+    {name: "Greg Project 2", link: 'https://imgix.ranker.com/user_node_img/50007/1000130887/original/good-guy-greg-on-storytelling-photo-u2?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=500', description:'Look what he did'},
+    {name: 'Scumbag Steve Project 1', link:'https://i.dailymail.co.uk/i/pix/2011/02/10/article-0-0D203DAD000005DC-312_468x469.jpg', description:'Look what he did'},
+    {name: "Bad Luck Brian Project 1", link:'https://media.makeameme.org/created/escapes-a-burning-590cd1.jpg', description:'Look what he did' },
+    {name: "Bad Luck Brian Project 2", link:'https://media.makeameme.org/created/start-coding-hello.jpg', description:'Look what he did'},
+    {name: "Bad Luck Brian Project 3", link:'https://i.imgur.com/yTlx8.jpeg',description:'Look what he did'},
 ]
 
 app.get("/", (req, res) => {
@@ -49,13 +53,22 @@ app.get("/history", (req, res) => {
   });
 });
 
-app.get("/pastwork", (req, res) => {
-  res.render("pastwork.ejs");
+app.get("/pastprojects", (req, res) => {
+  res.render("pastprojects.ejs", {
+    projects:projects
+  });
+    
 });
 
-app.get("/pastwork/:jobs", (req, res) => {
+app.get("/pastprojects/:jobs", (req, res) => {
   const jobs = req.params.jobs;
-  res.render("jobs.ejs");
+
+  const specificJob = projects.filter(
+    (project) => project.name === jobs);
+  res.render("jobs.ejs", {
+    jobs:jobs,
+    specificJob: specificJob,
+  });
 });
 
 app.get("/contact", (req, res) => {

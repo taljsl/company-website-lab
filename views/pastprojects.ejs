@@ -9,6 +9,12 @@
 <body>
     <%- include('./partials/nav') %>
     <h1>Past Projects</h1>
-    
+    <ul>
+       <% projects.forEach(project => { %>
+            <li>
+                <a href='/pastprojects/<%=project.name%>'><%=project.name%></a>
+            </li>
+       <% })%>
+    </ul>
 </body>
 </html>
