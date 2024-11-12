@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+app.use(express.static('public'));
 
 const welcomeMessage =
   "Welcome to Memecorp, the best place to hire famous Meme People for taks.";
