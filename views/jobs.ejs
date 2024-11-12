@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%=jobs%></title>
     <link rel="stylesheet" href="/css/app.css">    
+    <div class="background">
 </head>
 <body>
     <%- include('./partials/nav') %>
-    <h1><%=jobs%></h1>
+    <h1 id="mainTitle"><%=jobs%></h1>
     <% specificJob.forEach(job => { %>
         <img src="<%=job.link%>" alt="">
         <p><%=job.description%></p>
     <%})%>
 </body>
+</div>
 </html>

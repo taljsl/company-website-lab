@@ -73,3 +73,19 @@
 a {
     color: navy;
 }
+li {
+    color: navy;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 35px;
+}
+p {
+    font-size: 35px;
+    color:navy;
+    justify-self: center;
+}
+img{
+   display: block;
+   margin: auto;
+    }
