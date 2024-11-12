@@ -8,5 +8,13 @@
 </head>
 <body>
     <%- include('./partials/nav') %>
+    <h1>Links to Similar Project Sites</h1>
+    <ul>
+        <% externalLinks.forEach(link => { %>
+            <li>
+                <a href="<%=link.link%>"><%=link.link%></a>
+            </li>
+       <% }) %>
+    </ul>
 </body>
 </html>
